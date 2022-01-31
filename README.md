@@ -7,7 +7,7 @@
 - [strings](#strings)
 
 
-##tipos de datos
+## tipos de datos
 
 | Tipos | Ejemplo |
 | ----- | ---- |
@@ -19,7 +19,7 @@
 | object | Colección de propiedades. |
 | symbol | Identificador único. |
 
-##variables
+## variables
 
 
 ```
@@ -60,7 +60,7 @@ console.log(obj)
 // { name: "FreeCodeCamp", review: "Awesome"}
 ```
 
-##strings
+## strings
 
 ```
 // escapar de las comillas literales
