@@ -139,3 +139,109 @@ var sandwich = ['peanut butter', 'jelly', 'bread'][
   (['Bulls', 23], ['White Sox', 45])
 ]
 ```
+
+Índice de un array
+```
+var ourArray = [50, 60, 70]
+var ourData = ourArray[0] // 50
+// modificar un array con índices
+var ourArray = [50, 40, 30]
+ourArray[0] = 15 // equals [15,40,30]
+// acceder a matrices multidimensionales con índices
+var arr = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+  [[10, 11, 12], 13, 14],
+]
+arr[3] // [[10,11,12], 13, 14]
+arr[3][0] // [10,11,12]
+arr[3][0][1] // 11
+```
+
+Manipular arrays con reverse, push, pop shift y unshift
+```
+// reverse() le da la vuelta al array
+;[1, 'two', 3].reverse() // [ 3, 'two', 1 ]
+// push() añade un elemento al final del array
+var arr = [1, 2, 3]
+arr.push(4) // arr is now [1,2,3,4]
+// pop() para eliminar el último valor del array
+var threeArr = [1, 4, 6]
+var oneDown = threeArr.pop()
+console.log(oneDown) // 6
+console.log(threeArr) // [1, 4]
+// shift() elimina el primer elemento del array
+var ourArray = [1, 2, [3]]
+var removedFromOurArray = ourArray.shift()
+// [2, [3]].
+// unshift() añade un elemento al principio del array
+var ourArray = ['Stimpson', 'J', 'cat']
+ourArray.shift() // ["J", "cat"]
+ourArray.unshift('Happy') // ["Happy", "J", "cat"]
+```
+
+Eliminar cualquier elemento
+```
+// el primer parámetro es el índice, el segundo indica el número de elementos a eliminar.
+let array = ['today', 'was', 'not', 'so', 'great']
+array.splice(2, 2)
+// elimina 2 elementos empezando por el tercer elemento
+// ['today', 'was', 'great']
+// también devuelve un nuevo array que contiene el valor de los elementos eliminados
+let array = ['I', 'am', 'feeling', 'really', 'happy']
+let newArray = array.splice(3, 2) // ['really', 'happy']
+// el tercer parámetro, representa uno o más elementos
+function colorChange(arr, index, newColor) {
+  arr.splice(index, 1, newColor)
+  return arr
+}
+let colorScheme = ['#878787', '#a08794', '#bb7e8c', '#c9b6be', '#d1becf']
+colorScheme = colorChange(colorScheme, 2, '#332327')
+// hemos eliminado '#bb7e8c' y añadido '#332327' en su lugar
+// colorScheme es ahora igual a ['#878787', '#a08794', '#332327', '#c9b6be', '#d1becf']
+```
+
+Copiar array
+```
+// Copia un número determinado de elementos a un nuevo array y deja el array original intacto
+let weatherConditions = ['rain', 'snow', 'sleet', 'hail', 'clear']
+let todaysWeather = weatherConditions.slice(1, 3)
+// todaysWeather es igual a ['snow', 'sleet'];
+// weatherConditions sigue siendo igual a ['rain', 'snow', 'sleet', 'hail', 'clear']
+```
+
+Acceso a array anidada
+```
+var ourPets = [
+  {
+    animalType: 'cat',
+    names: ['Meowzer', 'Fluffy', 'Kit-Cat'],
+  },
+  {
+    animalType: 'dog',
+    names: ['Spot', 'Bowser', 'Frankie'],
+  },
+]
+ourPets[0].names[1] // "Fluffy"
+ourPets[1].names[0] // "Spot"
+```
+
+Saber si una array tiene un determinado elemento
+```
+let fruits = ['Banana', 'Orange', 'Apple', 'Mango']
+fruits.includes('Mango') // true
+```
+
+Desestructuración de arrays para asignar variables
+```
+const [a, b] = [1, 2, 3, 4, 5, 6]
+console.log(a, b) // 1, 2
+// acceder a cualquier valor utilizando comas para llegar al índice deseado
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6]
+console.log(a, b, c) // 1, 2, 5
+// recoger el resto de los elementos en un array separado.
+const [a, b, ...arr] = [1, 2, 3, 4, 5, 7]
+console.log(a, b) // 1, 2
+console.log(arr) // [3, 4, 5, 7]
+```
