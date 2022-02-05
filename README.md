@@ -79,3 +79,63 @@ var anAdjective = 'Impresionante'
 var ourStr = 'freeCodeCamp es '
 ourStr += anAdjective
 ```
+
+Secuencias de escape
+
+| Código | Salida |
+| ----- | ---- |
+| \' | comillas simples (') |
+| \" | comillas dobles (") |
+| \\ | backslash (\) |
+| \n | nueva línea |
+| \r | carriage return |
+| \t | tab |
+| \b | backspace |
+| \f | form feed |
+
+Longitud de un string
+```
+'Alan Peter'.length //10
+```
+
+Split y Join
+```
+let str = 'a string'
+let splittedStr = str.split('')
+// [ 'a', ' ', 's', 't', 'r', 'i', 'n', 'g' ]
+let joinedStr = splittedStr.join('')
+// a string
+```
+
+Indice de una string
+```
+//el primer elemento tiene un índice de 0
+var firstLetterOfFirstName = ''
+var firstName = 'Ada'
+firstLetterOfFirstName = firstName[0] // A
+// encontrar el último carácter de un string
+var firstName = 'Ada'
+var lastLetterOfFirstName = firstName[firstName.length - 1] // a
+```
+
+Template literals
+```
+const person = {
+  name: 'Zodiac Hasbro',
+  age: 56,
+}
+// Template literal con interpolación de varias líneas y strings
+const greeting = `Hello, my name is ${person.name}!
+I am ${person.age} years old.`
+console.log(greeting)
+// Hello, my name is Zodiac Hasbro!
+// I am 56 years old.
+```
+
+Arrays
+```
+var sandwich = ['peanut butter', 'jelly', 'bread'][
+  // arrays anidados
+  (['Bulls', 23], ['White Sox', 45])
+]
+```
